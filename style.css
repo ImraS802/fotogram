@@ -1,9 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
 header {
     display: flex;
     justify-content: flex-start;
     padding: 20px 120px;
     max-width: 1440px;
     width: 100%;
+    background-color: grey;
+}
+
+.content-limitation-header {
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
