@@ -1,0 +1,17 @@
+let images = [
+  'architecture-3146263_640.jpg',
+  'big-city-630140_640.jpg',
+  'broadway-3094717_640.jpg',
+  'brooklyn-bridge-2575420_640.jpg',
+  'brooklyn-bridge-2686294_640.jpg',
+  'city-1868135_640.jpg',
+  'empire-state-building-792315_640.jpg',
+  'favicon.svg',
+  'flatiron-246227_640.jpg',
+  'fotogram_logo.svg',
+  'museum-246223_640.jpg',
+  'new-york-4030711_640.jpg',
+  'new-york-833208_640.jpg',
+  'new-york-926224_640.jpg',
+  'statue-of-liberty-6693960_640.jpg',
+];
