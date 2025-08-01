@@ -50,3 +50,40 @@ header {
     text-align: center;
     font-size: 14px;
 }
+
+/* footer */
+.content-limitation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+}
+
+footer {
+    max-width: 1440px;
+    padding: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.social-media {
+    width: 40px;
+    height: auto;
+    filter: invert(100%) brightness(200%);
+    transition: filter 125ms ease;
+
+}
+
+.social-media:hover,
+.social-media:focus {
+    filter: drop-shadow(0px 0px 5px #f7f5f3);
+}
