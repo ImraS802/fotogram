@@ -41,20 +41,21 @@ function renderImages() {
 function getTemplateHtml(index) {
   return `
     <div class="single_element">
-    <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="displayImageInOverlay('./img/${imagesCollection[index]}')">
-    <p class="titleText">${titlesCollection[index]}</p>
+    <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="toggleOverlay(${index})">
     </div>`;
 }
 
-// Hintergundkarte für geklicktes Bild
-function toggleOverlay() {
+// Hintergrundkarte für geklicktes Bild
+function toggleOverlay(index = null) {
   let overlayRef = document.getElementById('overlay');
+  let overlayImage = document.getElementById('overlayImage');
+  let overlayTitle = document.getElementById('overlayTitle');
 
-  overlayRef.classList.toggle('d_none');
-}
-
-function displayImageInOverlay(imageSrc) {
-  const overlayImage = document.getElementById('overlayImage');
-  overlayImage.src = imageSrc;
-  toggleOverlay();
+  if (index !== null) {
+    overlayRef.classList.remove('d_none');
+    overlayImage.src = `./img/${imagesCollection[index]}`;
+    overlayTitle.textContent = titlesCollection[index];
+  } else {
+    overlayRef.classList.add('d_none');
+  }
 }
