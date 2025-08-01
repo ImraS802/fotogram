@@ -34,14 +34,27 @@ function renderImages() {
   let showImg = document.getElementById('imgShown');
 
   for (let i = 0; i < imagesCollection.length; i++) {
-    showImg.innerHTML += getNotesTemplateHtml(i);
+    showImg.innerHTML += getTemplateHtml(i);
   }
 }
 
-function getNotesTemplateHtml(index) {
+function getTemplateHtml(index) {
   return `
-    <div onclick="toggleOverlay()" class="single_element">
-    <img src="./img/${imagesCollection[index]}" class="imagesNY" alt="Images of New York">
+    <div class="single_element">
+    <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="displayImageInOverlay('./img/${imagesCollection[index]}')">
     <p class="titleText">${titlesCollection[index]}</p>
     </div>`;
+}
+
+// Hintergundkarte für geklicktes Bild
+function toggleOverlay() {
+  let overlayRef = document.getElementById('overlay');
+
+  overlayRef.classList.toggle('d_none');
+}
+
+function displayImageInOverlay(imageSrc) {
+  const overlayImage = document.getElementById('overlayImage');
+  overlayImage.src = imageSrc;
+  toggleOverlay();
 }

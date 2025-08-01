@@ -74,6 +74,58 @@ main {
     font-size: 14px;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay_card {
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 80px 80px 100px #272829;
+}
+
+.overlay_image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.d_none {
+    display: none;
+}
+
+/* close button for overlay_card */
+.close_button {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #131414;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s ease;
+}
+
+.close_button:hover {
+    color: #878788;
+}
+
+
 /* footer */
 .content_limitation {
     width: 100%;

@@ -19,7 +19,15 @@
         </header>
     </div>
     <main>
-        <div id="imgShown"></div>
+        <div id="imgShown"> </div>
+        <div id="overlay" class="overlay d_none" onclick="toggleOverlay()">
+            <div class="overlay_card" onclick="event.stopPropagation()">
+                <button class="close_button" onclick="toggleOverlay()">✕</button>
+                <div id="overlay_dialog" class="overlay_dialog">
+                    <img id="overlayImage" class="overlay_image" src="" alt="Enlarged image">
+                </div>
+            </div>
+        </div>
     </main>
     <div class="content_limitation">
         <footer>
