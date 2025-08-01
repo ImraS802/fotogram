@@ -7,10 +7,10 @@
     <link rel="icon" href="./img/favicon.svg" type="image/svg">
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="renderImages()">
     <div class="content-limitation-header">
         <header>
             <a href="./index.html"><img class="logo" src="./img/fotogram_logo.svg" alt="Fotogram Logo" /></a>
@@ -29,7 +29,9 @@
             </nav> -->
         </header>
     </div>
-    <script src="script.js"></script>
+    <main>
+        <div id="imgShown"></div>
+    </main>
 </body>
 
 </html>

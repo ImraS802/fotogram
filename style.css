@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    padding: 0;
 }
 
 header {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 120px;
+    padding: 20px;
     max-width: 1440px;
     width: 100%;
     background-color: grey;
@@ -21,4 +21,32 @@ header {
 .logo {
     width: 200;
     height: 60px;
+}
+
+#imgShown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.imagesNY {
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: scale 125ms ease, color 125ms ease-in-out;
+}
+
+.single_element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleText {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
 }
