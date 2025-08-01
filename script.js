@@ -30,6 +30,9 @@ let titlesCollection = [
   'The Statue of Liberty',
 ];
 
+let currentIndex = 0;
+
+// renders images
 function renderImages() {
   let showImg = document.getElementById('imgShown');
 
@@ -53,9 +56,29 @@ function toggleOverlay(index = null) {
 
   if (index !== null) {
     overlayRef.classList.remove('d_none');
-    overlayImage.src = `./img/${imagesCollection[index]}`;
-    overlayTitle.textContent = titlesCollection[index];
+    overlayImage.src = `./img/${imagesCollection[currentIndex]}`;
+    overlayTitle.textContent = titlesCollection[currentIndex];
   } else {
     overlayRef.classList.add('d_none');
   }
+}
+
+// Pfeil-buttons zum navigieren zw. Bildern
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % imagesCollection.length;
+  updateOverlayContent();
+}
+
+function showPreviousImage() {
+  currentIndex =
+    (currentIndex - 1 + imagesCollection.length) % imagesCollection.length;
+  updateOverlayContent();
+}
+
+function updateOverlayContent() {
+  const overlayImage = document.getElementById('overlayImage');
+  const overlayTitle = document.getElementById('overlayTitle');
+
+  overlayImage.src = `./img/${imagesCollection[currentIndex]}`;
+  overlayTitle.textContent = titlesCollection[currentIndex];
 }
