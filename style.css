@@ -9,6 +9,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #E0E3E6;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
     justify-content: flex-start;
     padding: 20px 90px;
     width: 100%;
-    background-color: grey;
+    background-color: #A1A4A6
 }
 
 .content_limitation_header {
@@ -78,7 +79,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: grey;
+    background-color: #A1A4A6;
 }
 
 footer {
