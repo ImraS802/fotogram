@@ -16,16 +16,16 @@ let imagesCollection = [
 
 let titlesCollection = [
   'Brooklyn Bridge close up',
-  'NY Scyscrapers',
+  'NY skyscrapers',
   'Broadway',
   'Brooklyn Bridge from a far',
   'Brooklyn Bridge at night',
-  'NY scyline at night with Hudson River',
-  'NY scyline',
+  'NY skyline at night with Hudson River',
+  'NY skyline',
   'The Flat Iron',
   'Guggenheim Museum',
   'Empire State Building',
-  'Scyscraper window mirror',
+  'Skyscraper window mirror',
   'NY from above',
   'The Statue of Liberty',
 ];
