@@ -54,6 +54,13 @@ main {
     transition: scale 125ms ease, color 125ms ease-in-out;
 }
 
+.imagesNY:hover {
+    scale: 1.2;
+    /* drop-shadow(offset-x offset-y blur-radius color) */
+    filter: drop-shadow(10px 20px 5px #01010c);
+    cursor: pointer;
+}
+
 .single_element {
     display: flex;
     flex-direction: column;
