@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
 }
 
 html,
@@ -10,6 +12,14 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #E0E3E6;
+}
+
+@font-face {
+    font-family: "Rubik", sans-serif;
+    src: url('./fonts/Rubik-Italic-VariableFont_wght.ttf') format('ttf'),
+        url('./fonts/Rubik-VariableFont_wght.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 header {
@@ -29,7 +39,12 @@ header {
     max-width: 1440px;
 }
 
-/* main */
+h1 {
+    padding: 40px 40px 0 40px;
+    text-align: center;
+    color: #4D5052;
+}
+
 main {
     flex: 1;
 }
@@ -72,15 +87,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80vw;
+    width: 40vw;
     max-height: 90vh;
+    padding: 10px;
 }
 
 .overlay_title {
     margin-top: 20px;
     font-size: 18px;
     text-align: center;
-    color: black;
+    color: #4D5052;
 }
 
 .overlay {
@@ -203,4 +219,37 @@ footer {
 .social_media:hover,
 .social_media:focus {
     filter: drop-shadow(0px 0px 5px #f7f5f3);
+}
+
+@media(max-width:720px) {
+    .overlay_card {
+        padding: 20px;
+    }
+}
+
+@media(max-width:700px) {
+    .overlay_dialog {
+        width: 40vw;
+    }
+}
+
+
+@media(max-width:530px) {
+    header {
+        justify-content: center;
+    }
+}
+
+@media(max-width:430px) {
+    .overlay_image {
+        height: 40vh;
+    }
+}
+
+
+@media(max-width:370px) {
+    .logo {
+        width: 150px;
+        height: auto;
+    }
 }
