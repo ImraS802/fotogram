@@ -55,6 +55,7 @@ function toggleOverlay(index = null) {
   let overlayTitle = document.getElementById('overlayTitle');
 
   if (index !== null) {
+    currentIndex = index;
     overlayRef.classList.remove('d_none');
     overlayImage.src = `./img/${imagesCollection[currentIndex]}`;
     overlayTitle.textContent = titlesCollection[currentIndex];
