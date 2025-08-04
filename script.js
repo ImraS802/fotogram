@@ -63,7 +63,7 @@ function toggleOverlay(index = null) {
     currentIndex = index; // damit andere Funktionen exakt wissen welches Bild angezeigt werden soll
     overlayRef.classList.remove('d_none'); // overlay wird sichtbar
     overlayImage.src = `./img/${imagesCollection[currentIndex]}`;
-    overlayTitle.textContent = titlesCollection[currentIndex];
+    overlayTitle.textContent = titlesCollection[currentIndex]; // Titel setzen anhand von Index der angeklickt wurde
 
     document.addEventListener('keydown', escCloseOverlay); // Accessibility: Esc Taste um overlay zu schließen
   } else {
@@ -73,7 +73,7 @@ function toggleOverlay(index = null) {
   }
 }
 
-// Accessibility: overlay mit Tastatur öffnen
+// Accessibility: overlay mit Tastatur schließen
 function escCloseOverlay(event) {
   if (event.key === 'Escape') {
     toggleOverlay();
@@ -82,17 +82,22 @@ function escCloseOverlay(event) {
 
 // Pfeil-buttons zum navigieren zw. Bildern
 function showNextImage() {
-  currentIndex = (currentIndex + 1) % imagesCollection.length;
-  updateOverlayContent();
+  currentIndex = (currentIndex + 1) % imagesCollection.length; // currentIndex = 0, bedeutet erstes Bild wird wieder angezeigt
+  updateOverlayImagesAndTitles();
 }
 
 function showPreviousImage() {
   currentIndex =
-    (currentIndex - 1 + imagesCollection.length) % imagesCollection.length;
-  updateOverlayContent();
+    (currentIndex - 1 + imagesCollection.length) % imagesCollection.length; // + imagesCollection.length: addiert array-Länge drauf um nicht negative Zahlen anzuzeigen;
+  // currentIndex = 0;
+  // (currentIndex - 1 + 13) % 13
+  // = (-1 + 13) % 13
+  // = 12 % 13
+  // = 12 bleibt übrig
+  updateOverlayImagesAndTitles();
 }
 
-function updateOverlayContent() {
+function updateOverlayImagesAndTitles() {
   const overlayImage = document.getElementById('overlayImage');
   const overlayTitle = document.getElementById('overlayTitle');
 
