@@ -240,6 +240,12 @@ footer {
     }
 }
 
+@media(max-width:515px) {
+    #imgShown {
+        padding-bottom: 60px;
+    }
+}
+
 @media(max-width:430px) {
     .overlay_image {
         height: 40vh;
