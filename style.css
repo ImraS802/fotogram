@@ -220,6 +220,12 @@ footer {
     filter: drop-shadow(0px 0px 5px #f7f5f3);
 }
 
+@media(max-width: 1165px) {
+    .overlay_dialog {
+        max-height: 80vh;
+    }
+}
+
 @media(max-width:720px) {
     .overlay_card {
         padding: 20px;
@@ -236,10 +242,15 @@ footer {
     }
 }
 
-
 @media(max-width:530px) {
     header {
         justify-content: center;
+    }
+}
+
+@media(max-width: 520px) {
+    .overlay_image {
+        height: 50vh;
     }
 }
 
