@@ -11,45 +11,49 @@
 </head>
 
 <body onload="renderImages()">
-    <div class="content_limitation_header">
+    <div class="content_limitation">
         <header>
             <div class="header_content">
                 <a href="./index.html"><img class="logo" src="./img/fotogram_logo.svg" alt="Fotogram Logo" /></a>
             </div>
         </header>
     </div>
-    <main>
-        <h1>New York's Best of Images</h1>
-        <div id="imgShown"></div>
-        <div id="overlay" class="overlay d_none" onclick="toggleOverlay()">
-            <!-- eventbubbling verhindert Schließmechanismus wenn innerhalb der Bildkarte geklickt wird -->
-            <div class="overlay_card" onclick="event.stopPropagation()">
-                <button class="close_button" onclick="toggleOverlay()">✕</button>
-                <div id="overlay_dialog" class="overlay_dialog">
-                    <img id="overlayImage" class="overlay_image" src="" alt="Enlarged image">
-                    <p id="overlayTitle" class="overlay_title"></p>
+    <div class="content_limitation">
+        <main>
+            <h1>New York's Best of Images</h1>
+            <div id="imgShown"></div>
+            <div id="overlay" class="overlay d_none" onclick="toggleOverlay()">
+                <!-- eventbubbling verhindert Schließmechanismus wenn innerhalb der Bildkarte geklickt wird -->
+                <div class="overlay_card" onclick="event.stopPropagation()">
+                    <button class="close_button" onclick="toggleOverlay()">✕</button>
+                    <div id="overlay_dialog" class="overlay_dialog">
+                        <img id="overlayImage" class="overlay_image" src="" alt="Enlarged image">
+                        <p id="overlayTitle" class="overlay_title"></p>
 
-                    <div class="overlay_arrows sticky_arrows">
-                        <button onclick="showPreviousImage()" class="button_previous"><img class="arrow_previous"
-                                src="./img/angles-left-solid-full.svg" alt="Show previous image"></button>
-                        <button onclick="showNextImage()" class="button_next"><img class="arrow_next"
-                                src="./img/angles-right-solid-full.svg" alt="Show next image"></button>
+                        <div class="overlay_arrows sticky_arrows">
+                            <button onclick="showPreviousImage()" class="button_previous"><img class="arrow_previous"
+                                    src="./img/angles-left-solid-full.svg" alt="Show previous image"></button>
+                            <button onclick="showNextImage()" class="button_next"><img class="arrow_next"
+                                    src="./img/angles-right-solid-full.svg" alt="Show next image"></button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <div class="content_limitation">
+        </main>
+    </div>
+    <div class="content_footer">
         <footer>
-            <div class="social_media_container">
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                    <img src="./img/instagram.svg" alt="Instagram logo" class="social_media" /></a>
-                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-                    <img src="./img/facebook.svg" alt="Facebook logo" class="social_media" /></a>
-                <a href="https://x.com/" target="_blank" aria-label="X (formerly Twitter)">
-                    <img src="./img/x-twitter.svg" alt="X logo (formerly Twitter)" class="social_media" /></a>
-                <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
-                    <img src="./img/youtube.svg" alt="YouTube logo" class="social_media" /></a>
+            <div class="footer_content_limitation">
+                <div class="social_media_container">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                        <img src="./img/instagram.svg" alt="Instagram logo" class="social_media" /></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                        <img src="./img/facebook.svg" alt="Facebook logo" class="social_media" /></a>
+                    <a href="https://x.com/" target="_blank" aria-label="X (formerly Twitter)">
+                        <img src="./img/x-twitter.svg" alt="X logo (formerly Twitter)" class="social_media" /></a>
+                    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                        <img src="./img/youtube.svg" alt="YouTube logo" class="social_media" /></a>
+                </div>
             </div>
         </footer>
     </div>
