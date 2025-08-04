@@ -2,8 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Rubik", sans-serif;
-    font-weight: bold;
+    font-family: "Permanent Marker", sans-serif;
 }
 
 html,
@@ -15,10 +14,9 @@ body {
 }
 
 @font-face {
-    font-family: "Rubik", sans-serif;
-    src: url('./fonts/Rubik-Italic-VariableFont_wght.ttf') format('ttf'),
-        url('./fonts/Rubik-VariableFont_wght.ttf') format('ttf');
-    font-weight: normal;
+    font-family: "Permanent Marker";
+    src: url('./fonts/PermanentMarker-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -43,6 +41,7 @@ h1 {
     padding: 40px 40px 20px 40px;
     text-align: center;
     color: #4D5052;
+    font-size: 38px;
 }
 
 main {
@@ -94,7 +93,7 @@ main {
 
 .overlay_title {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
     color: #4D5052;
 }
