@@ -22,6 +22,7 @@
         <h1>New York's Best of Images</h1>
         <div id="imgShown"></div>
         <div id="overlay" class="overlay d_none" onclick="toggleOverlay()">
+            <!-- eventbubbling verhindert Schließmechanismus wenn innerhalb der Bildkarte geklickt wird -->
             <div class="overlay_card" onclick="event.stopPropagation()">
                 <button class="close_button" onclick="toggleOverlay()">✕</button>
                 <div id="overlay_dialog" class="overlay_dialog">

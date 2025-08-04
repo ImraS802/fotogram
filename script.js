@@ -1,3 +1,5 @@
+'use strict';
+
 let imagesCollection = [
   'architecture-3146263_640.jpg',
   'big-city-630140_640.jpg',
@@ -41,26 +43,40 @@ function renderImages() {
   }
 }
 
+// Accessibility: ab tabindex, um einzelne Bilder fokussierbar zu machen
 function getTemplateHtml(index) {
   return `
     <div class="single_element">
-    <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="toggleOverlay(${index})">
+    <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="toggleOverlay(${index})" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' ') toggleOverlay(${index})">
     </div>`;
 }
 
-// Hintergrundkarte für geklicktes Bild
+// Hintergrundkarte für geklicktes Bild, Öffungs- und Schließfunktion, wenn index passed in overlay mit Bild öffnet sich
 function toggleOverlay(index = null) {
+  // anfangs kein overlay da index = null
   let overlayRef = document.getElementById('overlay');
   let overlayImage = document.getElementById('overlayImage');
   let overlayTitle = document.getElementById('overlayTitle');
 
+  // checken ob image index vorhanden wenn ja öffnet overlay
   if (index !== null) {
-    currentIndex = index;
-    overlayRef.classList.remove('d_none');
+    currentIndex = index; // damit andere Funktionen exakt wissen welches Bild angezeigt werden soll
+    overlayRef.classList.remove('d_none'); // overlay wird sichtbar
     overlayImage.src = `./img/${imagesCollection[currentIndex]}`;
     overlayTitle.textContent = titlesCollection[currentIndex];
+
+    document.addEventListener('keydown', escCloseOverlay); // Accessibility: Esc Taste um overlay zu schließen
   } else {
     overlayRef.classList.add('d_none');
+
+    document.removeEventListener('keydown', escCloseOverlay); // Accessibility: Esc Tastenfunction wird wieder entfernt
+  }
+}
+
+// Accessibility: overlay mit Tastatur öffnen
+function escCloseOverlay(event) {
+  if (event.key === 'Escape') {
+    toggleOverlay();
   }
 }
 
