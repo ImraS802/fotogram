@@ -25,10 +25,16 @@ header {
     justify-content: flex-start;
     padding: 20px 90px;
     width: 100%;
-    background-color: #A1A4A6
+    max-width: 1440px;
 }
 
 .content_limitation {
+    display: flex;
+    justify-content: center;
+    background-color: #A1A4A6;
+}
+
+.content_limitation_main {
     display: flex;
     justify-content: center;
 }
@@ -192,17 +198,16 @@ main {
 }
 
 .footer_content_limitation {
-    max-width: 1440px;
     margin: 0 auto;
 }
 
 footer {
     padding: 80px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 1440px;
 }
 
 .social_media_container {
@@ -242,7 +247,7 @@ footer {
 
 @media(max-width:700px) {
     .overlay_dialog {
-        width: 40vw;
+        width: 80vw;
     }
 }
 
@@ -268,8 +273,11 @@ footer {
     .overlay_image {
         height: 40vh;
     }
-}
 
+    footer {
+        padding: 80px 20px;
+    }
+}
 
 @media(max-width:370px) {
     .logo {
