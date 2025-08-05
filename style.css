@@ -128,12 +128,14 @@ main {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 80px 80px 100px #272829;
+    display: flex;
 }
 
 .overlay_image {
     border-radius: 10px;
     width: auto;
     max-width: 100%;
+    min-height: 300px;
     height: 60vh;
     object-fit: cover;
 }
@@ -143,23 +145,19 @@ main {
 }
 
 /* arrow buttons to navigate between images */
-.overlay_arrows {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
 
 .sticky_arrows {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    padding-top: 30px;
+    gap: 30px;
+    z-index: 1100;
 }
 
 .button_previous,
 .button_next {
     font-size: 24px;
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
     cursor: pointer;
     background: transparent;
     border: none;
@@ -236,43 +234,21 @@ footer {
     }
 }
 
-@media(max-width:720px) {
-    .overlay_card {
-        padding: 20px;
-    }
-
-    .close_button {
-        font-size: 20px;
-    }
-}
-
-@media(max-width:700px) {
+@media(max-width: 700px) {
     .overlay_dialog {
         width: 80vw;
     }
 }
 
-@media(max-width:530px) {
+@media(max-width: 530px) {
     header {
         justify-content: center;
-    }
-}
-
-@media(max-width: 520px) {
-    .overlay_image {
-        height: 50vh;
     }
 }
 
 @media(max-width:515px) {
     #imgShown {
         padding-bottom: 60px;
-    }
-}
-
-@media(max-width:430px) {
-    .overlay_image {
-        height: 40vh;
     }
 
     footer {
