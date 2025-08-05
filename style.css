@@ -37,6 +37,7 @@ header {
 .content_limitation_main {
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 
 .header_content {
