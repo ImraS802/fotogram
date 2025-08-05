@@ -79,7 +79,6 @@ main {
 
 .imagesNY:hover {
     scale: 1.2;
-    /* drop-shadow(offset-x offset-y blur-radius color) */
     filter: drop-shadow(10px 20px 5px #01010c);
     cursor: pointer;
 }
@@ -144,8 +143,6 @@ main {
     display: none;
 }
 
-/* arrow buttons to navigate between images */
-
 .sticky_arrows {
     display: flex;
     justify-content: center;
@@ -157,7 +154,6 @@ main {
 .button_previous,
 .button_next {
     font-size: 24px;
-    /* padding: 8px 12px; */
     cursor: pointer;
     background: transparent;
     border: none;
@@ -169,8 +165,6 @@ main {
     height: 28px;
 }
 
-
-/* close button for overlay_card */
 .close_button {
     position: absolute;
     top: 5px;
@@ -188,7 +182,6 @@ main {
     color: #878788;
 }
 
-/* footer */
 .content_footer {
     width: 100%;
     background-color: #A1A4A6;

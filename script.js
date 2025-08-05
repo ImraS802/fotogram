@@ -34,7 +34,6 @@ let titlesCollection = [
 
 let currentIndex = 0;
 
-// renders images
 function renderImages() {
   let showImg = document.getElementById('imgShown');
 
@@ -43,7 +42,6 @@ function renderImages() {
   }
 }
 
-// Accessibility: ab tabindex, um einzelne Bilder fokussierbar zu machen
 function getTemplateHtml(index) {
   return `
     <div class="single_element">
@@ -51,49 +49,39 @@ function getTemplateHtml(index) {
     </div>`;
 }
 
-// Hintergrundkarte für geklicktes Bild, Öffungs- und Schließfunktion, wenn index passed in overlay mit Bild öffnet sich
 function toggleOverlay(index = null) {
-  // anfangs kein overlay da index = null
   let overlayRef = document.getElementById('overlay');
   let overlayImage = document.getElementById('overlayImage');
   let overlayTitle = document.getElementById('overlayTitle');
 
-  // checken ob image index vorhanden wenn ja öffnet overlay
   if (index !== null) {
-    currentIndex = index; // damit andere Funktionen exakt wissen welches Bild angezeigt werden soll
-    overlayRef.classList.remove('d_none'); // overlay wird sichtbar
+    currentIndex = index;
+    overlayRef.classList.remove('d_none');
     overlayImage.src = `./img/${imagesCollection[currentIndex]}`;
-    overlayTitle.textContent = titlesCollection[currentIndex]; // Titel setzen anhand von Index der angeklickt wurde
+    overlayTitle.textContent = titlesCollection[currentIndex];
 
-    document.addEventListener('keydown', escCloseOverlay); // Accessibility: Esc Taste um overlay zu schließen
+    document.addEventListener('keydown', escCloseOverlay);
   } else {
     overlayRef.classList.add('d_none');
 
-    document.removeEventListener('keydown', escCloseOverlay); // Accessibility: Esc Tastenfunction wird wieder entfernt
+    document.removeEventListener('keydown', escCloseOverlay);
   }
 }
 
-// Accessibility: overlay mit Tastatur schließen
 function escCloseOverlay(event) {
   if (event.key === 'Escape') {
     toggleOverlay();
   }
 }
 
-// Pfeil-buttons zum navigieren zw. Bildern
 function showNextImage() {
-  currentIndex = (currentIndex + 1) % imagesCollection.length; // currentIndex = 0, bedeutet erstes Bild wird wieder angezeigt
+  currentIndex = (currentIndex + 1) % imagesCollection.length;
   updateOverlayImagesAndTitles();
 }
 
 function showPreviousImage() {
   currentIndex =
-    (currentIndex - 1 + imagesCollection.length) % imagesCollection.length; // + imagesCollection.length: addiert array-Länge drauf um nicht negative Zahlen anzuzeigen;
-  // currentIndex = 0;
-  // (currentIndex - 1 + 13) % 13
-  // = (-1 + 13) % 13
-  // = 12 % 13
-  // = 12 bleibt übrig
+    (currentIndex - 1 + imagesCollection.length) % imagesCollection.length;
   updateOverlayImagesAndTitles();
 }
 
