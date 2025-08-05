@@ -45,7 +45,7 @@ function renderImages() {
 function getTemplateHtml(index) {
   return `
     <div class="single_element">
-    <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="toggleOverlay(${index})" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' ') toggleOverlay(${index})">
+      <img src="./img/${imagesCollection[index]}" class="imagesNY" id="imagesNY" alt="${titlesCollection[index]}" onclick="toggleOverlay(${index})" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' ') toggleOverlay(${index})">
     </div>`;
 }
 
